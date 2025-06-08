@@ -1,11 +1,4 @@
-.pricing-features {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .pricing-feature {
-        min-width: auto;
-    }/* Reset and Base Styles */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -53,10 +46,8 @@ body {
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
-    background: #4285f4;
-    border-radius: 50%;
+    width: 200px;
+    height: 60px;
     margin-right: 0.5rem;
     display: flex;
     align-items: center;
@@ -169,6 +160,51 @@ body {
     color: #4285f4;
 }
 
+/* Logo Animation Keyframes */
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .hero-logos {
     flex: 1;
     display: flex;
@@ -177,6 +213,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    max-width: 400px;
+    margin-left: auto;
 }
 
 .logo-circle {
@@ -187,15 +225,75 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    margin: 0.5rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.placeholder-logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #666;
+.logo-circle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
 }
+
+.logo-circle img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Individual logo animations */
+.logo-animate {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Specific animations for each logo */
+.logo-circle:nth-child(1).logo-animate {
+    animation-name: slideInLeft;
+    animation-delay: var(--delay, 0.1s);
+}
+
+.logo-circle:nth-child(2).logo-animate {
+    animation-name: slideInUp;
+    animation-delay: var(--delay, 0.2s);
+}
+
+.logo-circle:nth-child(3).logo-animate {
+    animation-name: slideInRight;
+    animation-delay: var(--delay, 0.3s);
+}
+
+.logo-circle:nth-child(4).logo-animate {
+    animation-name: slideInLeft;
+    animation-delay: var(--delay, 0.4s);
+}
+
+.logo-circle:nth-child(5).logo-animate {
+    animation-name: slideInRight;
+    animation-delay: var(--delay, 0.5s);
+}
+
+.logo-circle:nth-child(6).logo-animate {
+    animation-name: fadeInScale;
+    animation-delay: var(--delay, 0.6s);
+}
+
+.logo-circle:nth-child(7).logo-animate {
+    animation-name: fadeInScale;
+    animation-delay: var(--delay, 0.7s);
+}
+
+/* Specific positioning for mockup layout */
+.logo-circle:nth-child(1) { order: 1; } /* Google - top left */
+.logo-circle:nth-child(2) { order: 2; } /* Atlassian - top center */
+.logo-circle:nth-child(3) { order: 3; } /* Asana - top right */
+.logo-circle:nth-child(4) { order: 4; } /* PayPal - middle left */
+.logo-circle:nth-child(5) { order: 5; } /* Klarna - middle right */
+.logo-circle:nth-child(6) { order: 6; } /* Google Ads - bottom left */
+.logo-circle:nth-child(7) { order: 7; } /* Calendar - bottom right */
 
 /* Why Front Section */
 .why-front {
@@ -257,6 +355,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(66, 133, 244, 0.1);
+    border: white solid 5px;
 }
 
 .feature-icon::after {
@@ -349,64 +448,11 @@ body {
 
 .pricing-feature {
     display: flex;
-    align-items: flex-start;
-    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     flex: 1;
     gap: 1rem;
-}
-
-.feature-icon-blue,
-.feature-icon-green {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    flex-shrink: 0;
-    position: relative;
-    margin-bottom: 0.5rem;
-}
-
-.feature-icon-blue {
-    background: #e3f2fd;
-}
-
-.feature-icon-green {
-    background: #e8f5e8;
-}
-
-.feature-icon-blue::after,
-.feature-icon-green::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-}
-
-.feature-icon-blue::after {
-    background: #4285f4;
-}
-
-.feature-icon-green::after {
-    background: #4caf50;
-}
-
-.pricing-feature h4 {
-    margin-bottom: 0.75rem;
-    color: #2c3e50;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.pricing-feature p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
 }
 
 .pricing-feature-content {
@@ -416,11 +462,33 @@ body {
 .pricing-feature-img {
     width: 60px;
     height: 60px;
-    margin-bottom: 10px;;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+}
+
+.pricing-feature-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pricing-feature h4 {
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pricing-feature p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .badge {
