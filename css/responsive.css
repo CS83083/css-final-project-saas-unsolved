@@ -79,7 +79,43 @@
 }
 
 /* ========================================
-   MOBILE LARGE (481px to 767px)
+   TABLET AND MOBILE - HAMBURGER MENU
+   ======================================== */
+@media (max-width: 1023px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .trigram {
+        display: block;
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: color 0.3s ease;
+    }
+    
+    .trigram:hover {
+        color: #4285f4;
+    }
+    
+    .trigram i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hide hamburger menu on desktop */
+@media (min-width: 1024px) {
+    .trigram {
+        display: none;
+    }
+}
+
+
+/* ========================================
+   MOBILE (481px to 767px)
    ======================================== */
 @media (max-width: 767px) {
     .nav-links {
