@@ -1,4 +1,11 @@
-/* Reset and Base Styles */
+.pricing-features {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .pricing-feature {
+        min-width: auto;
+    }/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -249,7 +256,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: white solid 5px;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.1);
 }
 
 .feature-icon::after {
@@ -269,7 +276,7 @@ body {
 /* Pricing Section */
 .pricing {
     padding: 4rem 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .pricing h2 {
@@ -287,14 +294,14 @@ body {
 
 .pricing-container {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     align-items: flex-start;
 }
 
 .pricing-main {
-    flex: 1;
+    flex: 0 0 400px;
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     text-align: center;
@@ -331,21 +338,31 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    min-width: 600px;
+}
+
+.pricing-features-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 .pricing-feature {
     display: flex;
-    gap: 1rem;
     align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    gap: 1rem;
 }
 
 .feature-icon-blue,
 .feature-icon-green {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     flex-shrink: 0;
     position: relative;
+    margin-bottom: 0.5rem;
 }
 
 .feature-icon-blue {
@@ -363,9 +380,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
 }
 
 .feature-icon-blue::after {
@@ -377,16 +394,33 @@ body {
 }
 
 .pricing-feature h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: #2c3e50;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .pricing-feature p {
     color: #666;
     font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pricing-feature-content {
+    flex: 1;
+}
+
+.pricing-feature-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
 }
 
 .badge {
@@ -629,6 +663,15 @@ blockquote {
     .pricing-container {
         flex-direction: column;
         gap: 2rem;
+    }
+    
+    .pricing-features {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .pricing-feature {
+        min-width: auto;
     }
     
     .contact-container {
