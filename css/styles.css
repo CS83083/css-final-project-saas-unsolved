@@ -57,6 +57,10 @@ body {
     font-weight: bold;
 }
 
+.footer .logo-icon {
+    width: 100px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -71,12 +75,9 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #4285f4;
-}
-
 .btn-primary {
     background: #4285f4;
+    border: 3px solid #4285f4 !important;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -86,9 +87,7 @@ body {
     transition: background 0.3s;
 }
 
-.btn-primary:hover {
-    background: #3367d6;
-}
+
 
 /* Hero Section */
 .hero {
@@ -138,8 +137,8 @@ body {
     background: #4285f4;
     color: white;
     padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
+    border: 3px solid #4285f4;
+    border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
@@ -148,18 +147,10 @@ body {
     transition: background 0.3s;
 }
 
-.btn-video:hover {
-    background: #3367d6;
-}
-
 .learn-more {
     color: #666;
     text-decoration: none;
     font-weight: 500;
-}
-
-.learn-more:hover {
-    color: #4285f4;
 }
 
 /* Logo Animation Keyframes */
@@ -225,11 +216,6 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     position: absolute;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo-circle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
 }
 
 .logo-circle img {
@@ -471,10 +457,11 @@ body {
     flex: 0 0 400px;
     background: white;
     padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid #6666;
     text-align: center;
 }
+
+
 
 .price {
     margin-bottom: 1rem;
@@ -519,8 +506,8 @@ body {
 .pricing-feature {
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    text-align: center; */
+    align-items: center;
+    text-align: center;
     flex: 1;
     gap: 1rem;
 }
@@ -548,8 +535,8 @@ body {
     margin-bottom: 0.75rem;
     color: #2c3e50;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     font-size: 1.1rem;
     font-weight: 600;
@@ -668,7 +655,7 @@ blockquote {
 
 .contact-form h3 {
     margin-bottom: 2rem;
-    color: #20335c;
+    color: #2c3e50;
     font-size: 1.3rem;
     line-height: 1.4;
 }
@@ -687,16 +674,7 @@ blockquote {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     font-size: 1rem;
-    background: #fafafa;
     transition: border-color 0.3s, background-color 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #4285f4;
-    background: white;
 }
 
 .contact-form input,
@@ -734,14 +712,12 @@ blockquote {
 }
 
 .form-links a {
-    color: #4285f4;
+    color: #677788;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
-.form-links a:hover {
-    text-decoration: underline;
-}
+
 
 .btn-submit {
     width: 100%;
@@ -808,10 +784,6 @@ blockquote {
     transition: color 0.3s;
 }
 
-.footer-column ul li a:hover {
-    color: #4285f4;
-}
-
 .badge-small {
     background: #4285f4;
     color: white;
@@ -820,103 +792,4 @@ blockquote {
     font-size: 0.7rem;
     font-weight: 600;
     margin-left: 0.5rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .features-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .features-grid::before {
-        display: none;
-    }
-    
-    .pricing-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .pricing-features {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .pricing-feature {
-        min-width: auto;
-    }
-    
-    .contact-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .footer-links {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 1rem;
-    }
-    
-    .nav-container {
-        padding: 0 1rem;
-    }
-    
-    .hero-container {
-        padding: 0 1rem;
-    }
-    
-    .contact-container {
-        padding: 0 1rem;
-    }
-    
-    .footer-container {
-        padding: 0 1rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 1.75rem;
-    }
-    
-    .why-front h2,
-    .pricing h2 {
-        font-size: 2rem;
-    }
-    
-    .contact-left h2 {
-        font-size: 2rem;
-    }
 }

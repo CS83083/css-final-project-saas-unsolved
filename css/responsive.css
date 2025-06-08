@@ -1,0 +1,147 @@
+
+/* ========================================
+   DESKTOP (1200px and up)
+   ======================================== */
+@media (min-width: 1200px) {
+    /* Desktop-specific styles can go here if needed */
+}
+
+/* ========================================
+   DESKTOP HOVER EFFECTS (1024px and up)
+   ======================================== */
+@media (min-width: 1024px) {
+    .btn-primary:hover,
+    .btn-video:hover,
+    .btn-submit:hover {
+        background: white;
+        color: #05359c;
+        border: 3px solid #05359c;
+    }
+
+    .nav-links a:hover {
+        color: #4285f4;
+    }
+
+    .learn-more:hover {
+        color: #4285f4;
+    }
+
+    .logo-circle:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+    }
+
+    .pricing-main:hover {
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: #4285f4;
+        background: white;
+    }
+
+    .form-links a:hover {
+        color: #4285f4;
+    }
+
+    .footer-column ul li a:hover {
+        color: #4285f4;
+    }
+}
+
+/* ========================================
+   TABLET (768px to 1023px)
+   ======================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet-specific styles */
+    .hero-container {
+        gap: 3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .pricing-container {
+        gap: 2rem;
+    }
+    
+    .pricing-features {
+        min-width: 500px;
+    }
+    
+    .contact-container {
+        gap: 3rem;
+    }
+}
+
+/* ========================================
+   MOBILE LARGE (481px to 767px)
+   ======================================== */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .features-grid::before {
+        display: none;
+    }
+    
+    .pricing-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .pricing-features {
+        flex-direction: column;
+        gap: 2rem;
+        min-width: auto;
+    }
+    
+    .pricing-feature {
+        min-width: auto;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
