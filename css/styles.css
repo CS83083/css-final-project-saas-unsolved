@@ -510,6 +510,7 @@ body {
 
 .pricing-feature-content {
   flex: 1;
+  text-align: left;
 }
 
 .pricing-feature-img {
@@ -532,7 +533,6 @@ body {
   color: #2c3e50;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
