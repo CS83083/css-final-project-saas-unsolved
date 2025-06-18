@@ -1,45 +1,47 @@
 
-/* Logo Animation Keyframes */
-@keyframes slideInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.8);
+@media (min-width: 1200px) {
+    /* Logo Animation Keyframes */
+    @keyframes slideInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(60px) scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 
-@keyframes slideInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-60px) scale(0.8);
+    @keyframes slideInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-60px) scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
 
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(60px) scale(0.8);
+    @keyframes slideInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(60px) scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
 
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
+    @keyframes fadeInScale {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 }

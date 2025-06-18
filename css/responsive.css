@@ -1,326 +1,141 @@
 /* ========================================
+   RESPONSIVE DESIGN - INDUSTRY STANDARD
+   ======================================== */
+
+/* ========================================
    DESKTOP (1200px and up)
    ======================================== */
 @media (min-width: 1200px) {
-    /* Desktop-specific styles can go here if needed */
+  /* Desktop-specific styles can go here if needed */
 }
 
 /* ========================================
    DESKTOP HOVER EFFECTS (1024px and up)
    ======================================== */
 @media (min-width: 1024px) {
+  .btn-primary:hover,
+  .btn-video:hover,
+  .btn-submit:hover {
+    background: white;
+    color: #05359c;
+    border: 3px solid #05359c;
+  }
 
-    .btn-primary:hover,
-    .btn-video:hover,
-    .btn-submit:hover {
-        background: white;
-        color: #05359c;
-        border: 3px solid #05359c;
-    }
+  .nav-links a:hover {
+    color: #4285f4;
+  }
 
-    .nav-links a:hover {
-        color: #4285f4;
-    }
+  .learn-more:hover {
+    color: #4285f4;
+  }
 
-    .learn-more:hover {
-        color: #4285f4;
-    }
+  .logo-circle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  }
 
-    .logo-circle:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-    }
+  .pricing-main:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
 
-    .pricing-main:hover {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #4285f4;
+    background: white;
+  }
 
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-        outline: none;
-        border-color: #4285f4;
-        background: white;
-    }
+  .form-links a:hover {
+    color: #4285f4;
+  }
 
-    .form-links a:hover {
-        color: #4285f4;
-    }
+  .footer-column ul li a:hover {
+    color: #4285f4;
+  }
 
-    .footer-column ul li a:hover {
-        color: #4285f4;
-    }
-
-
-    /* Individual logo animations */
-    .logo-animate {
-        opacity: 0;
-        animation-fill-mode: forwards;
-        animation-duration: 0.8s;
-        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    /* Specific animations for each logo */
-    .logo-circle:nth-child(1).logo-animate {
-        animation-name: slideInLeft;
-        animation-delay: var(--delay, 0.1s);
-    }
-
-    .logo-circle:nth-child(2).logo-animate {
-        animation-name: slideInUp;
-        animation-delay: var(--delay, 0.2s);
-    }
-
-    .logo-circle:nth-child(3).logo-animate {
-        animation-name: slideInRight;
-        animation-delay: var(--delay, 0.3s);
-    }
-
-    .logo-circle:nth-child(4).logo-animate {
-        animation-name: slideInLeft;
-        animation-delay: var(--delay, 0.4s);
-    }
-
-    .logo-circle:nth-child(5).logo-animate {
-        animation-name: slideInRight;
-        animation-delay: var(--delay, 0.5s);
-    }
-
-    .logo-circle:nth-child(6).logo-animate {
-        animation-name: fadeInScale;
-        animation-delay: var(--delay, 0.6s);
-    }
-
-    .logo-circle:nth-child(7).logo-animate {
-        animation-name: fadeInScale;
-        animation-delay: var(--delay, 0.7s);
-    }
-
-    /* Manual positioning for organic scatter effect */
-    #google-logo {
-        width: 50px;
-        height: 50px;
-        top: 20px;
-        left: 30px;
-    }
-
-    #google-logo img {
-        width: 38px;
-        height: 38px;
-    }
-
-    #asana-logo {
-        width: 75px;
-        height: 75px;
-        top: 10px;
-        left: 480px;
-    }
-
-    #asana-logo img {
-        width: 37px;
-        height: 37px;
-    }
-
-    #atlassian-logo {
-        width: 85px;
-        height: 85px;
-        top: 20px;
-        left: 120px;
-    }
-
-    #atlassian-logo img {
-        width: 50px;
-        height: 50px;
-    }
-
-    #paypal-logo {
-        width: 80px;
-        height: 80px;
-        top: 180px;
-        left: 20px;
-    }
-
-    #paypal-logo img {
-        width: 45px;
-        height: 45px;
-    }
-
-    #weave-logo {
-        width: 70px;
-        height: 70px;
-        top: 120px;
-        left: 350px;
-    }
-
-    #weave-logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #google-ads-logo {
-        width: 65px;
-        height: 65px;
-        top: 320px;
-        left: 130px;
-    }
-
-    #google-ads-logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #calendar-logo {
-        width: 75px;
-        height: 75px;
-        top: 360px;
-        left: 480px;
-    }
-
-    #calendar-logo img {
-        width: 48px;
-        height: 48px;
-    }
-
-
+  .pricing-features.mobile {
+    display: none !important;
+  }
 }
 
 /* ========================================
    TABLET (768px to 1023px)
    ======================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet-specific styles */
+  .hero-container {
+    gap: 3rem;
+  }
 
-    /* Tablet-specific styles */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
 
-    .hero-container {
-        gap: 3rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        gap: 4rem;
-        text-align: center;
-    }
+  .pricing-container {
+    gap: 2rem;
+  }
 
-    .hero-logos {
-        margin-right: 500px;
-        margin-left: 0px;
-    }
+  .pricing-features {
+    min-width: 500px;
+  }
 
-    .hero-buttons {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-    }
+  .contact-container {
+    gap: 3rem;
+  }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
+  .pricing-features.mobile {
+    display: none !important;
+  }
 
-    .pricing-container {
-        gap: 2rem;
-    }
+  .pricing-container {
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .pricing-features {
-        min-width: 500px;
-    }
+  .features-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 0rem;
+      flex-wrap: nowrap;
+      position: relative;
+  }
 
-    .contact-container {
-        gap: 3rem;
-    }
+  #asana-logo {
+    width: 75px;
+    height: 75px;
+    top: 10px;
+    left: 300px;
+  }
 
-    /* Manual positioning for organic scatter effect */
-    #google-logo {
-        width: 50px;
-        height: 50px;
-        top: 20px;
-        left: 30px;
-    }
+  #asana-logo img {
+    width: 37px;
+    height: 37px;
+  }
 
-    #google-logo img {
-        width: 38px;
-        height: 38px;
-    }
+  #weave-logo {
+    width: 70px;
+    height: 70px;
+    top: 120px;
+    left: 250px;
+  }
 
-    #asana-logo {
-        width: 75px;
-        height: 75px;
-        top: 10px;
-        left: 480px;
-    }
+  #weave-logo img {
+    width: 40px;
+    height: 40px;
+  }
 
-    #asana-logo img {
-        width: 37px;
-        height: 37px;
-    }
+  #calendar-logo {
+    width: 75px;
+    height: 75px;
+    top: 360px;
+    left: 300px;
+  }
 
-    #atlassian-logo {
-        width: 85px;
-        height: 85px;
-        top: 20px;
-        left: 120px;
-    }
-
-    #atlassian-logo img {
-        width: 50px;
-        height: 50px;
-    }
-
-    #paypal-logo {
-        width: 80px;
-        height: 80px;
-        top: 180px;
-        left: 20px;
-    }
-
-    #paypal-logo img {
-        width: 45px;
-        height: 45px;
-    }
-
-    #weave-logo {
-        width: 70px;
-        height: 70px;
-        top: 120px;
-        left: 350px;
-    }
-
-    #weave-logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #google-ads-logo {
-        width: 65px;
-        height: 65px;
-        top: 320px;
-        left: 130px;
-    }
-
-    #google-ads-logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #calendar-logo {
-        width: 75px;
-        height: 75px;
-        top: 360px;
-        left: 480px;
-    }
-
-    #calendar-logo img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .pricing-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  #calendar-logo img {
+    width: 48px;
+    height: 48px;
+  }
 
 }
 
@@ -328,203 +143,154 @@
    TABLET AND MOBILE - HAMBURGER MENU
    ======================================== */
 @media (max-width: 1023px) {
-    .nav-links {
-        display: none;
-    }
+  .nav-links {
+    display: none;
+  }
 
-    .trigram {
-        display: block;
-        background: none;
-        border: none;
-        color: #666;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        transition: color 0.3s ease;
-    }
+  .trigram {
+    display: block;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
 
-    .trigram:hover {
-        color: #4285f4;
-    }
+  .trigram:hover {
+    color: #4285f4;
+  }
 
-    .trigram i {
-        font-size: 1.2rem;
-    }
+  .trigram i {
+    font-size: 1.2rem;
+  }
 }
 
 /* Hide hamburger menu on desktop */
 @media (min-width: 1024px) {
-    .trigram {
-        display: none;
-    }
+  .trigram {
+    display: none;
+  }
 }
 
-
 /* ========================================
-   MOBILE (481px to 767px)
+   MOBILE LARGE (481px to 767px)
    ======================================== */
 @media (max-width: 767px) {
-    .nav-links {
-        display: none;
-    }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
 
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+  .hero-buttons {
+    justify-content: center;
+  }
 
-    .hero-buttons {
-        justify-content: center;
-    }
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .features-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+  .features-grid::before {
+    display: none;
+  }
 
-    .features-grid::before {
-        display: none;
-    }
+  .pricing-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .pricing-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  /* Hide pricing features on mobile */
+  .pricing-features.desk-top {
+    display: none !important;
+  }
 
-    .pricing-features {
-        flex-direction: column;
-        gap: 2rem;
-        min-width: auto;
-    }
+  .pricing-features-row {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
 
-    .pricing-feature {
-        min-width: auto;
-    }
+  .pricing-features {
+    flex-direction: column;
+    gap: 2rem;
+    min-width: auto;
+  }
 
-    .contact-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .pricing-feature {
+    min-width: auto;
+  }
 
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .footer-links {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
+  .footer-links {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
 
+  .pricing-feature-content {
+    width: 500px;
+  }
 
+  .hero-logos {
+    flex: 1;
+    margin-right: 600px;
+    max-width: 500px;
+    min-height: 390px;
+  }
 
-    .hero-container {
-        gap: 3rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        gap: 4rem;
-        text-align: center;
-    }
+  #asana-logo {
+    width: 75px;
+    height: 75px;
+    top: 10px;
+    left: 400px;
+  }
 
-    /* Manual positioning for organic scatter effect */
-    #google-logo {
-        width: 50px;
-        height: 50px;
-        top: 20px;
-        left: 30px;
-    }
+  #asana-logo img {
+    width: 37px;
+    height: 37px;
+  }
 
-    #google-logo img {
-        width: 38px;
-        height: 38px;
-    }
+  #weave-logo {
+    width: 70px;
+    height: 70px;
+    top: 120px;
+    left: 250px;
+  }
 
-    #asana-logo {
-        width: 75px;
-        height: 75px;
-        top: 10px;
-        left: 480px;
-    }
+  #weave-logo img {
+    width: 40px;
+    height: 40px;
+  }
 
-    #asana-logo img {
-        width: 37px;
-        height: 37px;
-    }
+  #calendar-logo {
+    width: 75px;
+    height: 75px;
+    top: 360px;
+    left: 400px;
+  }
 
-    #atlassian-logo {
-        width: 85px;
-        height: 85px;
-        top: 20px;
-        left: 120px;
-    }
-
-    #atlassian-logo img {
-        width: 50px;
-        height: 50px;
-    }
-
-    #paypal-logo {
-        width: 80px;
-        height: 80px;
-        top: 180px;
-        left: 20px;
-    }
-
-    #paypal-logo img {
-        width: 45px;
-        height: 45px;
-    }
-
-    #weave-logo {
-        width: 70px;
-        height: 70px;
-        top: 120px;
-        left: 350px;
-    }
-
-    #weave-logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #google-ads-logo {
-        width: 65px;
-        height: 65px;
-        top: 320px;
-        left: 130px;
-    }
-
-    #google-ads-logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #calendar-logo {
-        width: 75px;
-        height: 75px;
-        top: 360px;
-        left: 480px;
-    }
-
-    #calendar-logo img {
-        width: 48px;
-        height: 48px;
-    }
-
+  #calendar-logo img {
+    width: 48px;
+    height: 48px;
+  }
 }
